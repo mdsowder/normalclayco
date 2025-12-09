@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basket – Normal Clay Co.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Hand-drawn-ish fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Work+Sans:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Use this same header on ALL pages -->
+    <header>
+      <div class="container nav">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="assets/logo/no_background_logo.png"
+              alt="Normal Clay Co."
+              class="logo-image"
+            />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a href="basket.html" class="nav-cart" id="cartButton">
+          <span>Basket</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Basket items + summary -->
+      <section>
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h1 class="section-title">Basket</h1>
+              <p class="section-sub" style="max-width: none">
+                A small pile of things you are thinking about bringing home.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-card" id="basketContainer">
+            <!-- Filled by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Checkout prototype -->
+      <section>
+        <div class="container">
+          <div class="checkout-card">
+            <h2 class="checkout-steps-title">Checkout (prototype)</h2>
+            <p style="font-size: 0.86rem; color: #4b5749">
+              This is a sketch of how checkout might work later. Nothing here
+              actually submits yet.
+            </p>
+
+            <!-- Step 1 -->
+            <div class="checkout-step">
+              <strong>Step 1 · Who is ordering?</strong>
+              <div class="checkout-row">
+                <label>
+                  <input type="radio" name="who" id="who-guest" checked />
+                  Continue as guest
+                </label>
+                <label>
+                  <input type="radio" name="who" id="who-signin" />
+                  Sign in
+                </label>
+                <label>
+                  <input type="radio" name="who" id="who-create" />
+                  Create a new account
+                </label>
+              </div>
+
+              <!-- guest: name only -->
+              <div
+                class="checkout-row"
+                id="guestFields"
+                style="margin-top: 0.35rem"
+              >
+                <input
+                  class="checkout-small-input"
+                  type="text"
+                  id="guestName"
+                  placeholder="Name"
+                />
+              </div>
+
+              <!-- sign in: email + password -->
+              <div
+                class="checkout-row"
+                id="signinFields"
+                style="margin-top: 0.35rem; display: none"
+              >
+                <input
+                  class="checkout-small-input"
+                  type="email"
+                  id="signinEmail"
+                  placeholder="Email"
+                />
+                <input
+                  class="checkout-small-input"
+                  type="password"
+                  id="signinPassword"
+                  placeholder="Password"
+                />
+              </div>
+
+              <!-- create account -->
+              <div
+                class="checkout-row"
+                id="createFields"
+                style="margin-top: 0.35rem; display: none"
+              >
+                <input
+                  class="checkout-small-input"
+                  type="text"
+                  id="createFirst"
+                  placeholder="First name"
+                />
+                <input
+                  class="checkout-small-input"
+                  type="text"
+                  id="createLast"
+                  placeholder="Last name"
+                />
+                <input
+                  class="checkout-small-input"
+                  type="email"
+                  id="createEmail"
+                  placeholder="Email"
+                />
+                <input
+                  class="checkout-small-input"
+                  type="password"
+                  id="createPassword"
+                  placeholder="Password"
+                />
+                <input
+                  class="checkout-small-input"
+                  type="password"
+                  id="createPassword2"
+                  placeholder="Confirm password"
+                />
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="checkout-step">
+              <strong>Step 2 · Pickup or shipping?</strong>
+              <div class="checkout-row">
+                <label>
+                  <input
+                    type="radio"
+                    name="delivery"
+                    id="delivery-pickup"
+                    checked
+                  />
+                  Local pickup in Ypsilanti, MI
+                </label>
+                <label>
+                  <input type="radio" name="delivery" id="delivery-ship" />
+                  Ship to me
+                </label>
+              </div>
+              <div
+                class="checkout-row"
+                id="addressRow"
+                style="margin-top: 0.35rem; display: none"
+              >
+                <input
+                  class="checkout-small-input"
+                  type="text"
+                  id="addrStreet"
+                  placeholder="Street address"
+                />
+                <input
+                  class="checkout-small-input"
+                  type="text"
+                  id="addrCity"
+                  placeholder="City"
+                />
+                <input
+                  class="checkout-small-input"
+                  type="text"
+                  id="addrState"
+                  placeholder="State"
+                />
+                <input
+                  class="checkout-small-input"
+                  type="text"
+                  id="addrZip"
+                  placeholder="ZIP"
+                />
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="checkout-step">
+              <strong>Step 3 · How would you like to pay?</strong>
+              <div class="checkout-row">
+                <label>
+                  <input type="radio" name="pay" checked />
+                  Card (Stripe or Square)
+                </label>
+                <label>
+                  <input type="radio" name="pay" />
+                  PayPal or Venmo
+                </label>
+                <label>
+                  <input type="radio" name="pay" />
+                  Cash at pickup
+                </label>
+              </div>
+            </div>
+
+            <p
+              id="checkoutError"
+              style="margin-top: 0.55rem; font-size: 0.8rem; color: #b0452f"
+            ></p>
+
+            <div class="checkout-final">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="checkoutSubmit"
+              >
+                Place pretend order
+              </button>
+              <span style="font-size: 0.8rem; color: #4b5749">
+                No payment happens here yet — this is just to imagine the flow.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div
+        class="container"
+        style="
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+          align-items: center;
+        "
+      >
+        <span
+          style="
+            font-family: 'Quicksand', system-ui, sans-serif;
+            letter-spacing: 0.12em;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+          "
+        >
+          Made slowly in Ypsilanti, Michigan
+        </span>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 700px;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            font-size: 0.8rem;
+          "
+        >
+          <span
+            >© <span id="year"></span> Normal Clay Co. All rights
+            reserved.</span
+          >
+          <span>Find new pieces and market dates on Instagram.</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast">
+      <span class="toast-dot"></span>
+      <span id="toastMessage">Updated your basket</span>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const el = document.getElementById("basketContainer");
+        renderBasket(el);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=Work+Sans:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <meta charset="UTF-8" />
+    <title>Normal Clay Co. – Handmade Pottery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="assets/logo/no_background_logo.png"
+              alt="Normal Clay Co."
+              class="logo-image"
+            />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a href="basket.html" class="nav-cart" id="cartButton">
+          <span>Basket</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO COLLAGE -->
+      <section class="hero">
+        <div class="hero-collage"></div>
+
+        <div class="hero-copy">
+          <div class="container hero-inner">
+            <h1 class="hero-title">
+              Pottery for the very normal parts of the day.
+            </h1>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="shop.html">
+                See what’s on the shelf
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MEET MAGGIE TEASER -->
+      <section>
+        <div class="container">
+          <div class="about-card maker-panel">
+            <div class="maker-panel-text">
+              <h2 class="section-title" style="margin-bottom: 0.45rem">
+                Meet Maggie
+              </h2>
+              <p>
+                Normal Clay Co. is run by Maggie Sowder, a full-time mom and
+                part-time ceramist making small batches between naps and
+                neighborhood walks.
+                <a href="about.html" class="link-inline">Read more →</a>
+              </p>
+            </div>
+            <div class="maker-panel-photo">
+              <img
+                src="assets/images/maggie_field.jpg"
+                alt="Maggie from Normal Clay Co. in a field with her child."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPTIONAL: SEASONAL COLLECTIONS PREVIEW (can delete if she prefers super minimal) -->
+      <section>
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Seasonal collections</h2>
+              <p class="section-sub">
+                Small themed batches that come and go: greens one season, stars
+                the next.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3">
+            <article class="card">
+              <span class="tag tag-live">On the table</span>
+              <h3 class="card-title">Spring Wild Greens</h3>
+              <p class="card-meta">
+                Mugs, bowls, and pour-overs in mossy greens inspired by backyard
+                perennials.
+              </p>
+              <span class="pill">Small batch</span>
+              <div class="card-footer">
+                <span>Available online and for local pickup</span>
+                <a class="btn-ghost" href="shop.html">Browse &nbsp pieces →</a>
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="tag tag-archive">Archive</span>
+              <h3 class="card-title">Mushroom Line</h3>
+              <p class="card-meta">
+                Illustration-forward pieces with hand-carved fungi, now living
+                on people’s shelves.
+              </p>
+              <span class="pill">Sold out</span>
+              <div class="card-footer">
+                <span>Past work</span>
+                <span class="link-inline">Archive coming soon</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="tag tag-archive">Archive</span>
+              <h3 class="card-title">Everyday Mugs</h3>
+              <p class="card-meta">
+                Cozy, stackable mugs in warm clay tones. A studio staple that
+                comes and goes.
+              </p>
+              <span class="pill">Returning eventually</span>
+              <div class="card-footer">
+                <span>Keep an eye on Instagram</span>
+                <span class="link-inline">Follow along →</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div
+        class="container"
+        style="
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          gap: 0.35rem;
+          align-items: center;
+        "
+      >
+        <span
+          style="
+            font-family: 'Quicksand', system-ui, sans-serif;
+            letter-spacing: 0.12em;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+          "
+        >
+          Made slowly in Ypsilanti, Michigan
+        </span>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 700px;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            font-size: 0.8rem;
+          "
+        >
+          <span
+            >© <span id="year"></span> Normal Clay Co. All rights
+            reserved.</span
+          >
+          <span>Find new pieces and market dates on Instagram.</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast">
+      <span class="toast-dot"></span>
+      <span id="toastMessage">Added to basket</span>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
