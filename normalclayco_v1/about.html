@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <title>About – Normal Clay Co.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="assets/logo/no_background_logo.png"
+              alt="Normal Clay Co."
+              class="logo-image"
+            />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a href="basket.html" class="nav-cart" id="cartButton">
+          <span>Basket</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container maker-layout">
+          <div class="about-card">
+            <h1 class="section-title" style="margin-bottom: 0.5rem">
+              Normal Clay Co. is Maggie.
+            </h1>
+            <p>
+              Hi, I’m <strong>Maggie Sowder</strong>. I’m a full-time mom,
+              part-time ceramist, and long-time believer that the things we use
+              every day should feel special and a little bit strange.
+            </p>
+            <p style="margin-top: 0.6rem">
+              Most of this work is made in a small home studio, in the quiet
+              hours after bedtime or between tutoring sessions and grocery runs.
+              I started making pottery as a way to slow down, trade pieces with
+              friends, and bring more handmade things into our kitchen.
+            </p>
+            <p style="margin-top: 0.6rem">
+              I love local markets, messy studio shelves, and clay that
+              remembers the touch of a hand. Normal Clay Co. leans into wobble
+              and texture — every mug, plate, or bowl is a little different, the
+              way people are.
+            </p>
+            <ul class="checklist" style="margin-top: 0.9rem">
+              <li>
+                <span class="check-icon"></span>
+                <span
+                  >Small, seasonal batches instead of constant restocks.</span
+                >
+              </li>
+              <li>
+                <span class="check-icon"></span>
+                <span>Clay and tools sourced as locally as possible.</span>
+              </li>
+              <li>
+                <span class="check-icon"></span>
+                <span
+                  >Pieces meant to be used, chipped, loved, and passed around
+                  the table.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="maker-photo-wrap">
+            <img
+              src="assets/images/maggie_field.jpg"
+              alt="Maggie from Normal Clay Co. kneeling in a field with her child, picking berries."
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 0.75rem;
+        "
+      >
+        <span
+          >© <span id="year"></span> Normal Clay Co. All rights reserved.</span
+        >
+        <span>Find new pieces and market dates on Instagram.</span>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast">
+      <span class="toast-dot"></span>
+      <span id="toastMessage">Added to basket</span>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

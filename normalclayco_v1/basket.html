@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basket – Normal Clay Co.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Hand-drawn-ish fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Use this same header on ALL pages -->
+    <header>
+      <div class="container nav">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="assets/logo/no_background_logo.png"
+              alt="Normal Clay Co."
+              class="logo-image"
+            />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a href="basket.html" class="nav-cart" id="cartButton">
+          <span>Basket</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h1 class="section-title">Your basket of odd little treasures</h1>
+              <p class="section-sub">
+                You can adjust quantities here. Checkout itself will eventually
+                live wherever you plug in real payments.
+              </p>
+            </div>
+          </div>
+
+          <div
+            id="basketContainer"
+            class="about-card"
+            style="max-width: 720px; margin: 0 auto"
+          >
+            <!-- Filled by JS -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 0.75rem;
+        "
+      >
+        <span
+          >© <span id="year"></span> Normal Clay Co. All rights reserved.</span
+        >
+        <span>Find new pieces and market dates on Instagram.</span>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast">
+      <span class="toast-dot"></span>
+      <span id="toastMessage">Updated your basket</span>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const el = document.getElementById("basketContainer");
+        renderBasket(el);
+      });
+    </script>
+  </body>
+</html>

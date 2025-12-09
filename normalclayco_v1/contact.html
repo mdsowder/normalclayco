@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <title>Contact – Normal Clay Co.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="assets/logo/no_background_logo.png"
+              alt="Normal Clay Co."
+              class="logo-image"
+            />
+          </a>
+        </div>
+        <nav class="nav-links">
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a href="basket.html" class="nav-cart" id="cartButton">
+          <span>Basket</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container split split-2">
+          <div class="contact-card">
+            <h1 class="section-title" style="margin-bottom: 0.5rem">
+              reach out!
+            </h1>
+            <p style="font-size: 0.9rem; margin-bottom: 0.9rem">
+              Questions about a piece, curious about local pickup, or dreaming
+              up something custom? Send a note below — it really is just Maggie
+              reading these.
+            </p>
+            <form
+              onsubmit="event.preventDefault(); alert('Thanks for your message!');"
+            >
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" type="text" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" required />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  required
+                  placeholder="Tell me what you’re imagining…"
+                ></textarea>
+              </div>
+              <button class="btn btn-secondary" type="submit">
+                Send message
+              </button>
+            </form>
+          </div>
+
+          <div class="contact-card">
+            <h2 class="section-title" style="margin-bottom: 0.5rem">
+              markets & news
+            </h2>
+            <p style="font-size: 0.9rem; margin-bottom: 0.9rem">
+              Normal Clay Co. shows up most often at local markets and
+              neighborhood tables. The easiest way to hear about market dates
+              and new batches is to follow along on Instagram or send a message
+              asking to be added to Maggie’s very informal email list.
+            </p>
+            <p style="font-size: 0.9rem">
+              Instagram:
+              <a href="https://www.instagram.com/normalclayco/"
+                ><em style="color: blue">@normalclayco</em></a
+              >
+            </p>
+            <p style="font-size: 0.9rem">
+              Email:
+              <a href="https://www.instagram.com/normalclayco/"
+                ><em style="color: blue">normalclayco@gmail.com</em></a
+              >
+            </p>
+            <div class="mini-calendar">
+              <div class="mini-calendar-header">
+                <span class="mini-calendar-label">upcoming markets</span>
+                <span class="mini-calendar-month">spring 2026</span>
+              </div>
+
+              <ul class="mini-calendar-list">
+                <li>
+                  <div class="mini-calendar-dot">SAT</div>
+                  <div class="mini-calendar-info">
+                    <div class="mini-calendar-title">
+                      May 3 · Eastside Spring Market
+                    </div>
+                    <div class="mini-calendar-meta">10–3pm · Kalamazoo, MI</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="mini-calendar-dot">SUN</div>
+                  <div class="mini-calendar-info">
+                    <div class="mini-calendar-title">
+                      May 18 · Neighborhood Porch Pop-Up
+                    </div>
+                    <div class="mini-calendar-meta">
+                      Afternoon · South Westnedge
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="mini-calendar-dot">SAT</div>
+                  <div class="mini-calendar-info">
+                    <div class="mini-calendar-title">
+                      June 7 · Farmers’ Market Guest Booth
+                    </div>
+                    <div class="mini-calendar-meta">8–12pm · Downtown</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div
+        class="container"
+        style="
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 0.75rem;
+        "
+      >
+        <span
+          >© <span id="year"></span> Normal Clay Co. All rights reserved.</span
+        >
+        <span>Find new pieces and market dates on Instagram.</span>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast">
+      <span class="toast-dot"></span>
+      <span id="toastMessage">Added to basket</span>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
