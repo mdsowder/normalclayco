@@ -4,7 +4,7 @@ A small-shop website for **Normal Clay Co.**, my sister's handmade ceramics busi
 
 **Live site:** https://mdsowder.github.io/normalclayco/
 
-![Normal Clay Co. home page](demo_ss/Screenshot%202025-12-09%20at%204.35.46%20PM.png)
+![Normal Clay Co. home page](demo_ss/Screenshot%202025-12-09%20at%204.35.46%E2%80%AFPM.png)
 
 ## What it does
 
